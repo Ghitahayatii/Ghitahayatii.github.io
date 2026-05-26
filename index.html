@@ -542,14 +542,13 @@
 
     /* RESPONSIVE */
     @media (max-width:769px) {
-      .sidebar { display:none; }
       main { margin-left:0; }
-      .hero { padding:5rem 2.5rem; }
-      .section { padding:4rem 2.5rem; }
-      .about-grid, .contact-wrapper { grid-template-columns:1fr; gap:2.5rem; }
+      .hero { padding:5rem 1.5rem 3rem; }
+      .section { padding:3rem 1.5rem; }
+      .about-grid, .contact-wrapper { grid-template-columns:1fr; gap:2rem; }
       .exp-item, .edu-item { grid-template-columns:1fr; gap:.5rem; }
-      footer { padding:1.5rem 2.5rem; flex-direction:column; gap:.5rem; text-align:center; }
-      .linkedin-section { flex-direction:column; padding:3rem 2.5rem; gap:2rem; }
+      footer { padding:1.5rem 1.5rem; flex-direction:column; gap:.5rem; text-align:center; }
+      .linkedin-section { flex-direction:column; padding:3rem 1.5rem; gap:2rem; }
     }
   
     /* LANGUAGE BUTTON */
@@ -632,39 +631,26 @@
 
     /* MOBILE */
     @media (max-width: 768px) {
-      body { flex-direction: column; }
+      body { flex-direction: row; }
 
       .sidebar {
-        position: fixed !important;
-        left: -280px !important;
-        top: 0 !important;
-        width: 260px !important;
-        height: 100vh !important;
-        overflow-y: auto !important;
-        transition: left .3s ease !important;
-        z-index: 100 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        padding: 2rem 1.2rem !important;
-        background: var(--dark) !important;
+        position: fixed;
+        left: -280px;
+        top: 0;
+        width: 260px;
+        height: 100vh;
+        overflow-y: auto;
+        transition: left .3s ease;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1.2rem;
+        background: var(--dark);
       }
-      .sidebar.open { left: 0 !important; }
-
-      .sidebar .photo-wrap { display: block !important; width: 90px !important; height: 90px !important; }
-      .sidebar nav { display: flex !important; }
-      .sidebar .sidebar-name { display: block !important; }
-      .sidebar .sidebar-title { display: block !important; }
-      .sidebar .sidebar-footer { display: flex !important; }
+      .sidebar.open { left: 0; box-shadow: 4px 0 20px rgba(0,0,0,.4); }
 
       .hamburger-btn { display: flex !important; align-items: center; justify-content: center; }
-      main { margin-left: 0 !important; width: 100% !important; }
-      .hero { padding: 5rem 1.5rem 3rem; }
-      .section { padding: 3rem 1.5rem; }
-      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .contact-wrapper { grid-template-columns: 1fr; gap: 2rem; }
-      .linkedin-section { flex-direction: column; padding: 3rem 1.5rem; gap: 2rem; }
-      .exp-item { grid-template-columns: 1fr; gap: .5rem; }
-      .edu-item { grid-template-columns: 1fr; gap: .5rem; }
+      main { margin-left: 0; width: 100%; }
       .cert-img-grid { grid-template-columns: 1fr; }
       .lang-toggle-btn { top: .8rem; right: .8rem; }
     }
